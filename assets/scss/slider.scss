@@ -10,4 +10,37 @@
     height:80%;
     margin: auto;
     top: 10%;
+    overflow-y: hidden;
+    .content {
+        top: 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        @include transition(top .5s);
+    }
+    .content.before {
+        top: -100%;
+    }
+    .content.after {
+        top: 100%;
+    }
+}
+
+.bouboule {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $primary;
+    @include border-radius(50%);
+    &.top {
+        top: 5%;
+        transform: translateY(-50%);
+    }
+    &.bottom {
+        bottom: 5%;
+        transform: translateY(50%);
+    }
 }

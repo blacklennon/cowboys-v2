@@ -1,0 +1,21 @@
+<li>Nom du projet
+    <br />
+    <em>Campaign Daphine SS18</em>
+</li>
+<li>Direction Artistique
+    <br />
+    <em>Juliette Abitbole</em>
+</li>
+<li>Equipe
+    <br />
+    Edouard Sanville, photograph
+    <br />
+    Juliette Abitbol, photograph
+    <br />
+    Anne Chevrel, set design
+    <br />
+    Isabelle Guyon, make up artist
+</li>
+<li>
+    <em>03-04 Mai 2018, Paris</em>
+</li>
