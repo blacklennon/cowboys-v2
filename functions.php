@@ -13,6 +13,11 @@ function get_files($project)
     return $files;
 }
 
+function get_newsletter_text()
+{
+    return file_get_contents(__DIR__ . "/__NEWSLETTER.html");
+}
+
 function get_text($project)
 {
     return file_get_contents(__DIR__ . "/__PROJECTS/" . $project . "/text.txt");
