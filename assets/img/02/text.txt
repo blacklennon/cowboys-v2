@@ -1,0 +1,27 @@
+<li>Nom du projet
+    <br />
+    <em>Campaign Perrier-Jouët Blanc de Blanc</em>
+</li>
+<li>Direction Artistique
+    <br />
+    <em>Studio Twiiks</em>
+</li>
+<li>Equipe
+    <br />
+    Fedor Bitkov, photograph
+    <br />
+    Julien Dauvillier, DIT
+    <br />
+    Pete Hawk, First assistant
+    <br />
+    Fleur Huyghn, Stylist artist
+    <br />
+    Cécilia Malka, Set design
+    <br />
+    Audrey Payet, make up artist
+    <br />
+    Camille Delattre, Hair artist
+</li>
+<li>
+    <em>Date, Paris</em>
+</li>
