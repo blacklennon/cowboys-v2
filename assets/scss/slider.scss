@@ -6,24 +6,68 @@
 
 .vertical-wrapper  {
     position: relative;
-    width: 70%;
-    height:80%;
-    margin: auto;
+    width: 100%;
+    height: 80%;
     top: 10%;
     overflow: hidden;
     .content {
         top: 0;
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
         height: 100%;
-        @include transition(top .5s);
+        transform: translateX(-50%);
+        @include transition(all .5s);
+        max-width: 60%;
     }
     .content.before {
         top: -100%;
     }
     .content.after {
         top: 100%;
+    }
+    .h-right {
+        left: 80%;
+        transform: scale(.9);
+    }
+    .h-left {
+        left: -20%;
+        transform: scale(.9);
+    }
+}
+
+.h-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    @include transition(all .5s);
+    &.left {
+        left: -80%;
+        @include transition(left .3s);
+        &.none {
+            left: -100%;
+        }
+        .content {
+            right: 0;
+            left: auto;
+            transform: scale(.8);
+        }
+    }
+    &.right {
+        left: 80%;
+        &.none {
+            @include transition(left .3s);
+            left: 100%;
+        }
+        .content {
+            left: 0;
+            right: auto;
+            transform: scale(.8);
+        }
+    }
+    &.active {
+        z-index: 5;
     }
 }
 
@@ -42,7 +86,20 @@
         bottom: 5%;
         transform: translateY(50%) translateX(-50%);
     }
+    &.none {
+        display: none;
+    }
 }
+
+.click-right, .click-left {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    z-index: 8;
+}
+
+.click-left { left: 0; }
+.click-right { right: 0; }
 
 .project-infos {
     padding: 5rem 3rem;

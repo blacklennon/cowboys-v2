@@ -1,5 +1,5 @@
 function down() {
-    const active = $(".vertical-wrapper .active");
+    const active = $(".vertical-wrapper .h-content.active .active");
     const next = $(active).next();
 
     if (next.length) {
@@ -9,7 +9,7 @@ function down() {
 }
 
 function up() {
-    const active = $(".vertical-wrapper .active");
+    const active = $(".vertical-wrapper .h-content.active .active");
     const prev = $(active).prev();
 
     if (prev.length) {
