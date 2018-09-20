@@ -1,0 +1,29 @@
+.contact-container, .manifest-container {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 100%;
+    z-index: -1;
+    @include transition(top .5s);
+}
+
+.contact-container {
+    top: 100%;
+    &.show {
+        top: 50%;
+    }
+}
+
+.manifest-container {
+    top: -50%;
+    display: flex;
+    p {
+        text-align: center;
+        margin: auto;
+        font-size: 1.5em;
+        padding: 0 2rem;
+    }
+    &.show {
+        top: 0;
+    }
+}

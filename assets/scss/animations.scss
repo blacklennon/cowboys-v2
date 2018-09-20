@@ -1,0 +1,4 @@
+.slider-container.collapsed {
+    transform: scaleY(0);
+    transition: scaleY .5s;
+}

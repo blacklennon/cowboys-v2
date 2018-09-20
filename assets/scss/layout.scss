@@ -11,8 +11,10 @@ body {
     width: 100%;
     flex-shrink: 0;
     display: flex;
+    background-color: white;
     p {
         margin: 1rem 0;
+        cursor: pointer;
     }
 }
 
@@ -28,4 +30,8 @@ body {
     flex-grow: 1;
     flex-shrink: 1;
     position: relative;
+}
+
+#contact-link {
+    cursor: pointer;
 }
