@@ -9,11 +9,13 @@ function closeLogo() {
 function showContact() {
     $(".bg-container").toggleClass("collapsed top");
     $(".contact-container").toggleClass("show");
+    $("#contact-link").toggleClass("italic");
 }
 
 function showManifest() {
     $(".bg-container").toggleClass("collapsed bottom");
     $(".manifest-container").toggleClass("show");
+    $(".header").toggleClass("italic");
 }
 
 function openContact() {

@@ -14,6 +14,7 @@ function right() {
         $(active).toggleClass("right none active");
         $(right).toggleClass("none");
         setTimeout(toggleBouboule, 500);
+        updateInfos();
     } else {
         if (right.length) {
             const rightHidden = $(right).next();
@@ -29,6 +30,7 @@ function right() {
             }
             $(active).toggleClass("active left");
             setTimeout(toggleBouboule, 500);
+            updateInfos();
         }
     }
 }
@@ -55,11 +57,13 @@ function left() {
             }
             $(active).toggleClass("active right");
             setTimeout(toggleBouboule, 500);
+            updateInfos();
         } else {
             $(active).toggleClass("right none active");
             $(right).toggleClass("none");
             $(".bg-black").toggleClass("left");
             toggleBouboule();
+            updateInfos();
         }
     }
 }

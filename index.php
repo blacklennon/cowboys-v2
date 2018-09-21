@@ -116,7 +116,7 @@
         </div>
     </div>
     <footer class="footer">
-        <p>Projets</p>
+        <p><span id="project-link">Projets</span><span id="project-title"></span></p>
         <p id="contact-link">Contact</p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -124,6 +124,7 @@
     <script src="assets/js/verticalSlider.js"></script>
     <script src="assets/js/horizontalSlider.js"></script>
     <script src="assets/js/contactAnimation.js"></script>
+    <script src="assets/js/bottomInfos.js"></script>
 </body>
 
 </html>
