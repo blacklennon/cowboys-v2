@@ -30,7 +30,42 @@
         </div>
 
         <div class="contact-container">
-
+            <table>
+                <tr>
+                    <th></th>
+                    <th class="contact-type">Nicolas Tzipine<br /><em>Producteur</em></th>
+                </tr>
+                <tr>
+                    <td class="pre-text">Tel.</td>
+                    <td>00 00 00 00 00</td>
+                </tr>
+                <tr>
+                    <td class="contact-mail pretext">Mail.</td>
+                    <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
+                </tr>
+                <tr>
+                    <td class="pre-text">Add.</td>
+                    <td>0, rue Emile Allez<br />00000 Paris</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th></th>
+                    <th class="contact-type">Nicolas Tzipine<br /><em>Producteur</em></th>
+                </tr>
+                <tr>
+                    <td class="pre-text">Tel.</td>
+                    <td>00 00 00 00 00</td>
+                </tr>
+                <tr>
+                    <td class="contact-mail pretext">Mail.</td>
+                    <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
+                </tr>
+                <tr>
+                    <td class="pre-text">Add.</td>
+                    <td>0, rue Emile Allez<br />00000 Paris</td>
+                </tr>
+            </table>
         </div>
 
         <div class="slider-container">

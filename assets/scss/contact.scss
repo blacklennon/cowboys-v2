@@ -9,9 +9,35 @@
 
 .contact-container {
     top: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    table {
+        th {
+            font-weight: normal;
+            em {
+                font-size: .5em;
+            }
+        }
+        font-size: .9em;
+        margin: auto 0;
+    }
     &.show {
         top: 50%;
     }
+}
+
+.pre-text {
+    padding-right: 1.5rem;
+}
+
+.contact-type {
+    font-size: 1.4em;
+    padding-bottom: 1rem;
+}
+
+.contact-mail {
+    padding-bottom: 2rem;
 }
 
 .manifest-container {
