@@ -73,6 +73,42 @@
             <div class="bouboule bottom none"></div>
             <div class="click-left"></div>
             <div class="click-right"></div>
+            <div class="index">
+                <button id="close-index"></button>
+                <ul>
+                    <li>
+                        Narsico Rodriguez
+                        <br />
+                        <em>Campagne</em>
+                    </li>
+                    <li>
+                        Dom Perignon
+                        <br />
+                        <em>Brand Content</em>
+                    </li>
+                    <li>
+                        Perrier Jouet
+                        <br />
+                        <em>Campagne digitale</em>
+                    </li>
+                    <li>
+                        Nom du projet
+                        <br />
+                        <em>Films</em>
+                    </li>
+                    <li>
+                        Narsico Rodriguez
+                        <br />
+                        <em>Campagne</em>
+                    </li>
+                    <li>
+                        M.A.C
+                        <br />
+                        <em>Campagne Print</em>
+                    </li>
+                </ul>
+            </div>
+
             <div class="vertical-wrapper">
                 <?php foreach (get_project() as $div => $project) {
                         echo '<div class="h-content right none">';
