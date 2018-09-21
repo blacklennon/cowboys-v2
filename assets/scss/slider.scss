@@ -96,6 +96,9 @@
     height: 100%;
     width: 20%;
     z-index: 8;
+    &.none {
+        display: none;
+    }
 }
 
 .click-left { left: 0; }
