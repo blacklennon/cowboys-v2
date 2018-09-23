@@ -779,6 +779,7 @@ body {
 }
 .contact-container.show {
   top: 50%;
+  z-index: 10;
 }
 
 .pre-text {

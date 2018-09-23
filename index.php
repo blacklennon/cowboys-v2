@@ -62,8 +62,17 @@
                     <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
                 </tr>
                 <tr>
-                    <td class="pre-text">Add.</td>
-                    <td>0, rue Emile Allez<br />00000 Paris</td>
+                    <td class="pre-text">RS.</td>
+                    <td><table>
+                        <tr>
+                            <td><a href="//instagram.com">Instagram</a></td>
+                            <td><a href="//twitter.com">Twitter</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="//facebook.com">Facebook</a></td>
+                            <td><a href="//pinterest.com">Pinterest</a></td>
+                        </tr>
+                    </table></td>
                 </tr>
             </table>
         </div>
