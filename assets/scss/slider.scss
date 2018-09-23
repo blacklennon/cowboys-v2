@@ -42,10 +42,10 @@
     width: 100%;
     left: 0;
     right: 0;
-    @include transition(all .5s);
+    @include transition(all .7s);
     &.left {
         left: -80%;
-        @include transition(left .3s);
+        @include transition(left .7s);
         &.none {
             left: -100%;
         }
@@ -58,7 +58,7 @@
     &.right {
         left: 80%;
         &.none {
-            @include transition(left .3s);
+            @include transition(left .7s);
             left: 100%;
         }
         .content {
@@ -74,8 +74,8 @@
 
 .bouboule {
     position: absolute;
-    height: 2rem;
-    width: 2rem;
+    height: 1.4rem;
+    width: 1.4rem;
     left: 50%;
     background: $primary;
     @include border-radius(50%);

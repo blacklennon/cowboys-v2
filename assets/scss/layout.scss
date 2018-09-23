@@ -5,6 +5,9 @@ body {
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
+    @include media-breakpoint-down(md) {
+        font-size: $font-size-sm;
+    }
 }
 
 .header, .footer {
@@ -22,7 +25,10 @@ body {
 
 .footer {
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 4rem;
+    @include media-breakpoint-down(md) {
+        padding: 0 3rem;
+    }
 }
 
 .main-container {
