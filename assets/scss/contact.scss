@@ -12,8 +12,14 @@
     top: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 4rem;
+    @include media-breakpoint-down(md) {
+        padding: 0 3rem;
+    }
+    overflow-x: auto;
     table {
+        width: 50%;
+        padding-right: 2rem;
         th {
             font-weight: normal;
             em {
@@ -48,6 +54,9 @@
         text-align: center;
         margin: auto;
         font-size: 1.5em;
+        @include media-breakpoint-down(md) {
+            font-size: 1.2em;
+        }
         padding: 0 2rem;
     }
     &.show {
