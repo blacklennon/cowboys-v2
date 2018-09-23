@@ -36,9 +36,9 @@
             top: 0;
         }
     }
+    @include transition(all .5s);
     &.collapsed {
         transform: scaleY(.5);
-        @include transition(all .5s);
         transition-property: top, transform, bottom;
         &.top {
             top: 0;
