@@ -19,4 +19,11 @@ function removeIndex() {
     $(".index").removeClass("show");
 }
 
+function openProjects() {
+    if (!$(".h-content.active").length) {
+        right();
+    }
+}
+
 $("#close-index").click(removeIndex);
+$("#project-link").click(openProjects);
