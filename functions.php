@@ -68,7 +68,7 @@ function upload_media($project, $files)
         }
         if ($error == UPLOAD_ERR_OK) {
             $tmp_name = $files["media"]["tmp_name"][$key];
-            $name = $index . '.' . end(split('/', $files["media"]["type"][$key]));
+            $name = $index . '.' . end(explode('/', $files["media"]["type"][$key]));
             move_uploaded_file($tmp_name, __DIR__ . "/__PROJECTS/" . $project . '/' . $name);
         }
     }

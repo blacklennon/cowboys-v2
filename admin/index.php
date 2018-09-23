@@ -6,7 +6,7 @@ require "../functions.php";
 
 if (!empty($_POST)) {
     switch ($_POST['submit']) {
-        case 'Upload':
+        case 'Envoyer':
             if (empty($_POST['project'])) {
                 echo 'Project empty';
             } else if (empty($_POST['description'])) {
@@ -18,7 +18,7 @@ if (!empty($_POST)) {
             }
             break;
 
-        case 'Delete':
+        case 'Supprimer':
             if (empty($_POST['project'])) {
                 echo 'No Project Specified';
             } else {
@@ -65,7 +65,7 @@ if (!empty($_POST)) {
                 }
                 ?>
             </select>
-            <input type="submit" name="submit" value="Delete">
+            <input type="submit" name="submit" value="Supprimer">
         </form>
 
         <div>
