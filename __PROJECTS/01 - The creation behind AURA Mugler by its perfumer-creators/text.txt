@@ -1,23 +1,26 @@
 <li>
     Nom du projet<br />
-    <em>Campaign Perrier-Jouët Blanc de Blanc</em>
+    <em>The creation behind AURA Mugler by its perfumer-creators.</em>
 </li>
 <li>
     Direction Artistique<br />
-    <em>Studio Twiiks</em>
+    <em>Jules Théret</em>
 </li>
 <li>
     Equipe<br />
     <em>
-        Fedor Bitkov, photograph<br />
-        Julien Dauvillier, DIT<br />
-        Pete Hawk, First assistant<br />
-        Fleur Huyghn, Stylist artist<br />
-        Cécilia Malka, Set design<br />
-        Audrey Payet, make up artist<br />
-        Camille Delattre, Hair artist
+        Jules Théret, réalisateur<br />
+        Assistant Director // Laetitia Hughes<br />
+        Cinematographer // Laetitia de Montalembert<br />
+        Focus Puller // Rémi Derlvern<br />
+        Key Grip // Sacha Benichou<br />
+        Steadicamer // Thierry Le Mer<br />
+        Sound Recordist // Rémi Chanaud<br />
+        Editor & Colorist // Félix Oziel<br />
+        Motion Designer // Virgile Hernandez<br />
+        Composition, Mixing and Sound Design by Bon Enfant Production
     </em>
 </li>
 <li>
-    <em>Date, Paris</em>
+    <em>15-16 Février 2018, Paris</em>
 </li>

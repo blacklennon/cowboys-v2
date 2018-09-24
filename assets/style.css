@@ -489,7 +489,7 @@ body {
 .bg-black {
   position: absolute;
   top: 0;
-  width: 100%;
+  width: calc(100% - 1px);
   height: 100%;
   background-color: black;
   z-index: -1;
@@ -802,7 +802,7 @@ body {
 .manifest-container p {
   text-align: center;
   margin: auto;
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding: 0 2rem;
 }
 @media (max-width: 991.98px) {

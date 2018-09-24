@@ -119,29 +119,28 @@
             </div>
 
             <div class="vertical-wrapper">
-                <?php foreach (get_project() as $div => $project) {
-                        echo '<div class="h-content right none">';
+                <?php
+                $content_id = 0;
+                foreach (get_project() as $div => $project) {
+                        $content_id++;
+                        echo '<div class="h-content right none" id="content-'.$content_id.'">';
                         foreach (get_files_path($project) as $key => $value) {
                                 if ($key == 0) {
                                     if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                        echo '<div id="img'.($div+1).'" class="img img'.($div+1).'" style="overflow: hidden; width:970px; margin-top:30px;">
-                                            <video controls  poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" style="width: 970px;">
+                                        echo '<video controls class="content active" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
                                                 <source src="'.$value.'" type="video/'.pathinfo($value, PATHINFO_EXTENSION).'">
                                                     Your browser does not support the video tag or the file format of this video.
-                                                </video>
-                                            </div><br />';
+                                                </video>';
                                     else
                                         echo '<img src="'.$value .'" alt="" class="content active" />';
                                     } else if ($key == count(get_files_path($project))) {
                                     break;
                                 } else {
                                     if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                    echo '<div id="img'.($div+1).'-'.$key.'" class="img img'.($div+1).' secondaryImg" style="overflow: hidden; width:970px; margin-top:30px;">
-                                        <video controls  poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" style="width: 970px;">
+                                    echo '<video controls class="content after" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
                                             <source src="'.$value.'" type="video/'.pathinfo($value, PATHINFO_EXTENSION).'">
                                                 Your browser does not support the video tag or the file format of this video.
-                                            </video>
-                                        </div><br />';
+                                            </video>';
                                     else if (pathinfo($value, PATHINFO_EXTENSION) === 'txt') {
                                         echo '<div class="content project-infos after">
                                         <ul>
@@ -170,6 +169,7 @@
     <script src="assets/js/horizontalSlider.js"></script>
     <script src="assets/js/contactAnimation.js"></script>
     <script src="assets/js/bottomInfos.js"></script>
+    <script src="assets/js/indexMenu.js"></script>
 </body>
 
 </html>

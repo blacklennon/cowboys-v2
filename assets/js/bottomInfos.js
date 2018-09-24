@@ -22,6 +22,9 @@ function removeIndex() {
 function openProjects() {
     if (!$(".h-content.active").length) {
         right();
+    } else {
+        goToPage(0);
+        updateInfos();
     }
 }
 
