@@ -42,11 +42,11 @@ if (!empty($_POST)) {
     </head>
     <body>
         <form action="" method="post" enctype="multipart/form-data">
-            <label for="project">Nom du projet:</label>
+            <label for="project">Nom du projet :</label>
             <input type="text" name="project" value="" />
             <br>
-            <label for="description">Text:</label>
-            <input type="text" name="description" value="">
+            <label for="description">Description :</label>
+            <textarea name="description" cols="50" rows="50"><?php echo(file_get_contents("../__INDEX.txt")) ?></textarea>
             <br>
             <label for="media1" id="mediaLabel">Media1</label>
             <input type="file"
