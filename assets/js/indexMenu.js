@@ -52,6 +52,7 @@ function goToPage(id) {
         to.prev().addClass("left none");
         to = to.prev();
     }
+    updateInfos();
 }
 
 $(document).ready(fillIndex);

@@ -70,3 +70,17 @@ function left() {
 
 $(".click-right").click(right);
 $(".click-left").click(left);
+
+$(document).keydown(function (e) {
+    e.preventDefault();
+    console.log("ayylmaoo");
+    if (e.key == "ArrowLeft") {
+        left();
+    } else if (e.key == "ArrowRight") {
+        right();
+    } else if (e.key == "ArrowUp") {
+        up();
+    } else if (e.key == "ArrowDown") {
+        down();
+    }
+});
