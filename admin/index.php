@@ -41,6 +41,7 @@ if (!empty($_POST)) {
         <title>Admin - CowbowFilms</title>
     </head>
     <body>
+        <h3><a href="/admin/contact.php">Modifier contact et manifeste</a></h3>
         <form action="" method="post" enctype="multipart/form-data">
             <label for="project">Nom du projet :</label>
             <input type="text" name="project" value="" />

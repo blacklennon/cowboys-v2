@@ -20,8 +20,16 @@ function removeIndex() {
 }
 
 function openProjects() {
-    if (!$(".h-content.active").length && !$(".show").length) {
-        right();
+    if (!$(".h-content.active").length) {
+        if ($(".contact-container.show").length) {
+            showContact();
+            setTimeout(right, 500);
+        } else if ($(".manifest-container.show").length) {
+            showManifest();
+            setTimeout(right, 500);
+        } else {
+            right();
+        }
     } else {
         goToPage(0);
         updateInfos();

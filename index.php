@@ -18,8 +18,7 @@
     <div class="main-container">
 
         <div class="manifest-container">
-            <p>Susam fuga. Nam volore, est exces trumqui tecus. Quibusaest id qui deliqui te posae. Itatur, cus alit que con eate perum, que nos seque pre sit aribus audae evender emquiat aut unte el eum im idi nobist qui atur,
-            o ci aspellabore num sinum nos quidus, tquaeped ut quo omnisi iunti dipsunt Ectibusdaeped quia nos porposs edioreium nonsendem enti nihilit iaeperi tiissint quis sunt ulparci dit restotae.</p>
+            <p><?php echo(file_get_contents(__DIR__ . "/__MANIFEST.txt")); ?></p>
         </div>
 
         <div class="bg-container">
@@ -30,51 +29,7 @@
         </div>
 
         <div class="contact-container">
-            <table>
-                <tr>
-                    <th></th>
-                    <th class="contact-type">Nicolas Tzipine<br /><em>Producteur</em></th>
-                </tr>
-                <tr>
-                    <td class="pre-text">Tel.</td>
-                    <td>00 00 00 00 00</td>
-                </tr>
-                <tr>
-                    <td class="contact-mail pretext">Mail.</td>
-                    <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
-                </tr>
-                <tr>
-                    <td class="pre-text">Add.</td>
-                    <td>0, rue Emile Allez<br />00000 Paris</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th></th>
-                    <th class="contact-type">Nicolas Tzipine<br /><em>Producteur</em></th>
-                </tr>
-                <tr>
-                    <td class="pre-text">Tel.</td>
-                    <td>00 00 00 00 00</td>
-                </tr>
-                <tr>
-                    <td class="contact-mail pretext">Mail.</td>
-                    <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
-                </tr>
-                <tr>
-                    <td class="pre-text">RS.</td>
-                    <td><table>
-                        <tr>
-                            <td><a href="//instagram.com">Instagram</a></td>
-                            <td><a href="//twitter.com">Twitter</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="//facebook.com">Facebook</a></td>
-                            <td><a href="//pinterest.com">Pinterest</a></td>
-                        </tr>
-                    </table></td>
-                </tr>
-            </table>
+            <?php echo(file_get_contents(__DIR__ . "/__CONTACT.txt")); ?>
         </div>
 
         <div class="slider-container">

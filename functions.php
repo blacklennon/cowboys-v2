@@ -95,3 +95,13 @@ function create_project($post, $files)
     set_text($post['project'], $post['description']);
     upload_media($post['project'], $files);
 }
+
+function create_manifest($post)
+{
+    file_put_contents(__DIR__ . "/__MANIFEST.txt", $post['manifest']);
+}
+
+function create_contact($post)
+{
+    file_put_contents(__DIR__ . "/__CONTACT.txt", $post['contact']);
+}
