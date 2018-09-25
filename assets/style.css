@@ -416,6 +416,10 @@ body {
   font-style: italic;
 }
 
+#project-title.none {
+  display: none;
+}
+
 .bg-container {
   position: absolute;
   width: calc(100% - 8rem);

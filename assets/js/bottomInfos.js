@@ -31,7 +31,13 @@ function openProjects() {
             right();
         }
     } else {
-        goToPage(0);
+        if ($(".contact-container.show").length) {
+            openContact();
+        } else if ($(".manifest-container.show").length) {
+            openManifest();
+        } else {
+            goToPage(0);
+        }
         updateInfos();
     }
 }

@@ -73,7 +73,6 @@ $(".click-left").click(left);
 
 $(document).keydown(function (e) {
     e.preventDefault();
-    console.log("ayylmaoo");
     if (e.key == "ArrowLeft") {
         left();
     } else if (e.key == "ArrowRight") {

@@ -18,6 +18,11 @@ function showManifest() {
     $(".header").toggleClass("italic");
 }
 
+function toggleProjectDisplay() {
+    $("#project-title").toggleClass("none");
+    $("#project-link").toggleClass("italic");
+}
+
 function openContact() {
     if ($(".contact-container.show").length) {
         showContact();
@@ -25,6 +30,7 @@ function openContact() {
         if ($(".h-content.active").length) {
             setTimeout(closeLogo, 500);
             setTimeout(closeSlider, 1000);
+            setTimeout(toggleProjectDisplay, 1000);
         }
     } else if ($(".manifest-container.show").length) {
         showManifest();
@@ -34,6 +40,7 @@ function openContact() {
         closeSlider()
         setTimeout(closeLogo, 100);
         setTimeout(showContact, 500);
+        setTimeout(toggleProjectDisplay, 500);
     } else {
         $(".click-right, .click-left").toggleClass("none");
         showContact();
@@ -47,6 +54,7 @@ function openManifest() {
         if ($(".h-content.active").length) {
             setTimeout(closeLogo, 500);
             setTimeout(closeSlider, 1000);
+            setTimeout(toggleProjectDisplay, 1000);
         }
     } else if ($(".contact-container.show").length) {
         showContact();
@@ -56,6 +64,7 @@ function openManifest() {
         closeSlider()
         setTimeout(closeLogo, 100);
         setTimeout(showManifest, 500);
+        setTimeout(toggleProjectDisplay, 500);
     } else {
         $(".click-right, .click-left").toggleClass("none");
         showManifest();
