@@ -68,7 +68,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "Sang Bleu Kingdom";
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.3;
   color: #03207e;
@@ -443,8 +443,8 @@ body {
 .bg-container .img-container::before, .bg-container .img-container::after {
   content: "";
   position: absolute;
-  height: 50%;
-  width: 100%;
+  height: calc(50% + 1px);
+  width: calc(100% - 1px);
   left: 0;
   background-color: black;
   z-index: -1;
@@ -687,7 +687,7 @@ body {
   justify-content: space-between;
   height: 100%;
   font-size: 1.5rem;
-  padding: 3rem;
+  padding: 10rem 3rem;
   overflow-y: auto;
   box-sizing: border-box;
   margin: 0;

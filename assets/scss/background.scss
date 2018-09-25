@@ -20,8 +20,8 @@
         &::before, &::after {
             content: '';
             position: absolute;
-            height: 50%;
-            width: 100%;
+            height: calc(50% + 1px);
+            width: calc(100% - 1px);
             left: 0;
             background-color: black;
             z-index: -1;
