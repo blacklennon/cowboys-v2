@@ -19,6 +19,7 @@
         transform: translateX(-50%);
         @include transition(all .5s);
         max-width: 60%;
+        overflow-x: hidden;
     }
     .content.before {
         top: -100%;

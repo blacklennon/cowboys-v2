@@ -723,6 +723,7 @@ body {
   transform: translateX(-50%);
   transition: all 0.5s;
   max-width: 60%;
+  overflow-x: hidden;
 }
 @media screen and (prefers-reduced-motion: reduce) {
   .vertical-wrapper .content {
@@ -927,6 +928,7 @@ body {
   transform: translateY(-50%);
   position: relative;
   display: inline-block;
+  height: 100%;
 }
 
 .overlay {
