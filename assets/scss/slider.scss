@@ -74,18 +74,21 @@
 
 .bouboule {
     position: absolute;
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.5rem;
+    width: 1.5rem;
     left: 50%;
-    background: $primary;
+    background-position: center;
+    background-repeat: no-repeat;
     @include border-radius(50%);
     &.top {
         top: 5%;
         transform: translateY(-50%) translateX(-50%);
+        background-image: url("/assets/img/arrow-up.svg");
     }
     &.bottom {
         bottom: 5%;
         transform: translateY(50%) translateX(-50%);
+        background-image: url("/assets/img/arrow-down.svg");
     }
     &.none {
         display: none;

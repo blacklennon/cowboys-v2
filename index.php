@@ -82,7 +82,7 @@
                         foreach (get_files_path($project) as $key => $value) {
                                 if ($key == 0) {
                                     if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                        echo '<video controls class="content active" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
+                                        echo '<video controls class="content active afterglow" width="1280" height="720" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
                                                 <source src="'.$value.'" type="video/'.pathinfo($value, PATHINFO_EXTENSION).'">
                                                     Your browser does not support the video tag or the file format of this video.
                                                 </video>';
@@ -92,7 +92,7 @@
                                     break;
                                 } else {
                                     if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                    echo '<video controls class="content after" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
+                                    echo '<video controls class="content after afterglow" width="1280" height="720" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
                                             <source src="'.$value.'" type="video/'.pathinfo($value, PATHINFO_EXTENSION).'">
                                                 Your browser does not support the video tag or the file format of this video.
                                             </video>';
@@ -125,6 +125,7 @@
     <script src="assets/js/contactAnimation.js"></script>
     <script src="assets/js/bottomInfos.js"></script>
     <script src="assets/js/indexMenu.js"></script>
+    <script src="assets/js/afterglow.min.js"></script>
 </body>
 
 </html>
