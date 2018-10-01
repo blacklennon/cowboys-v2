@@ -4,9 +4,43 @@
 @import 'variables-custom';
 @import "bootstrap/root";
 @import "bootstrap/reboot";
+@import "bootstrap/modal";
+@import "bootstrap/utilities/embed";
 @import "layout";
 @import "background";
 @import "slider";
 @import "horizontal-slider.scss";
 @import "animations.scss";
-@import "contact.scss"
+@import "contact.scss";
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+  
+  .modal-dialog {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+.embed-responsive {
+    margin-top: 2rem;
+}

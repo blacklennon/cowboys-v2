@@ -49,15 +49,28 @@ if (!empty($_POST)) {
             <label for="description">Description :</label>
             <textarea name="description" cols="50" rows="50"><?php echo(file_get_contents("../__INDEX.txt")) ?></textarea>
             <br>
+            <h4>Upload photo</h4>
             <label for="media1" id="mediaLabel">Media1</label>
             <input type="file"
                 id="media1" name="media[]"
-                accept="image/*, video/*" />
+                accept="image/*" />
+            <br>
+            <button type="button" onClick="addMediaInput()">+</button>
+            <h4>Vidéo :</h4>
+            <p>Si une des images est une miniature de vidéo, indiquez le numéro du l'image ainsi que l'url de la vidéo.</p>
+            <label for="link-video">URL de la vidéo :</label>
+            <input type="text" name="link-video" />
+            <br>
+            <label for="num-video">Numéro de la miniature (format: 00 pour la première 01, 02, 03 etc...) :</label>
+            <input type="text" name="num-video" />
+            <br>
             <br>
 
             <input type="submit" name="submit" value="Envoyer">
         </form>
-        <button onClick="addMediaInput()">+</button>
+
+        <h2>Supprimer un projet</h2>
+
         <form action="" method="post">
             <select name="project">
                 <?php
@@ -68,6 +81,8 @@ if (!empty($_POST)) {
             </select>
             <input type="submit" name="submit" value="Supprimer">
         </form>
+
+        <h2>Liste des projets</h2>
 
         <div>
             <?php
