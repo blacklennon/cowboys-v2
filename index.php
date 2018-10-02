@@ -83,7 +83,7 @@
                         foreach (get_files_path($project) as $key => $value) {
                                 if ($key == 0) {
                                     if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                        echo '<div class="content active"><img src="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://www.youtube.com/embed/A-twOC3W558"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
+                                        echo '<div class="content active"><img src="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://player.vimeo.com/video/256962030"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
                                     else
                                         echo '<img src="'.$value .'" alt="" class="content active" />';
                                     } else if ($key == count(get_files_path($project))) {
