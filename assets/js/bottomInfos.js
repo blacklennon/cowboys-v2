@@ -1,7 +1,7 @@
 function updateInfos() {
     let text;
 
-    text = $(".h-content.active .project-infos li:first-of-type em:first-of-type").text();
+    text = $(".h-content.active .project-title").text();
     if (text) {
         $("#project-link").addClass("italic");
         $("#project-title").html(' - <b>'+text+'</b> - <a onclick="openIndex()">index</a>');

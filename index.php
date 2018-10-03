@@ -81,27 +81,25 @@
                         $content_id++;
                         echo '<div class="h-content right none" id="content-'.$content_id.'">';
                         foreach (get_files_path($project) as $key => $value) {
-                                if ($key == 0) {
-                                    if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                        echo '<div class="content active"><img src="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://player.vimeo.com/video/256962030"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
+                                if (pathinfo($value, PATHINFO_EXTENSION) === 'txxt')
+                                    $save = $value;
+                                else if (strstr($value, "-thumbnail"))
+                                    break;
+                                else if ($key == 0) {
+                                    if (pathinfo($value, PATHINFO_EXTENSION) === 'txt')
+                                        echo '<div class="content active"><img src="'.preg_replace("/.txt/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://player.vimeo.com/video/'.file_get_contents(__DIR__.$value).'"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
                                     else
                                         echo '<img src="'.$value .'" alt="" class="content active" />';
                                     } else if ($key == count(get_files_path($project))) {
                                     break;
                                 } else {
-                                    if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                    echo '<div class="content active"><img src="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://player.vimeo.com/video/256962030"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
-                                    else if (pathinfo($value, PATHINFO_EXTENSION) === 'txt') {
-                                        echo '<div class="content project-infos after">
-                                        <ul>
-                                            '.get_text($project).'
-                                        </ul>
-                                        </div>';
-                                    }
+                                    if (pathinfo($value, PATHINFO_EXTENSION) === 'txt')
+                                        echo '<div class="content after"><img src="'.preg_replace("/.txt/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://player.vimeo.com/video/'.file_get_contents(__DIR__.$value).'"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
                                     else
                                         echo '<img src="'.$value .'" alt="" class="content after" />';
                                 }
                             }
+                            echo '<div class="project-title">'.file_get_contents(__DIR__.$save).'</div>';
                             echo '</div>';
                     }?>
                     

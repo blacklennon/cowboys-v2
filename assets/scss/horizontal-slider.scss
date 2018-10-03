@@ -25,6 +25,7 @@
         color: white;
         li {
             margin-bottom: 1rem;
+            cursor: pointer;
             &:last-of-type {
                 margin: 0;
             }
@@ -111,4 +112,8 @@
         }
         &::after { transform: rotate(45deg); }
         &::before { transform: rotate(-45deg); }
+}
+
+.project-title {
+    display: none;
 }

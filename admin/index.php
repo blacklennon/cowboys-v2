@@ -9,8 +9,8 @@ if (!empty($_POST)) {
         case 'Envoyer':
             if (empty($_POST['project'])) {
                 echo 'Project empty';
-            } else if (empty($_POST['description'])) {
-                echo 'Description empty';
+            } else if (empty($_POST['project-title'])) {
+                echo 'Title empty';
             } else if (empty($_FILES['media'])) {
                 echo 'Media empty';
             } else {
@@ -42,13 +42,20 @@ if (!empty($_POST)) {
     </head>
     <body>
         <h3><a href="/admin/contact.php">Modifier contact et manifeste</a></h3>
+        <br>
+        <h2>Créer un projet</h2>
         <form action="" method="post" enctype="multipart/form-data">
-            <label for="project">Nom du projet :</label>
-            <input type="text" name="project" value="" />
+            <label for="project">Nom du dossier du projet :</label>
+            <input type="text" name="project" placeholder="Mettez un chiffre au début du nom pour définir l'ordre des projets" style="width: 350px;"/>
             <br>
-            <label for="description">Description :</label>
-            <textarea name="description" cols="50" rows="50"><?php echo(file_get_contents("../__INDEX.txt")) ?></textarea>
+            <label for="project-title">Nom du projet :</label>
+            <input type="text" name="project-title" value="" />
+            <h4>Upload vidéo</h4>
+            <label for="video">Code de la vidéo Vimeo :</label>
+            <input type="text" name="video" />
             <br>
+            <label for="video-nb">Numéro de la miniature :</label>
+            <input type="text" name="video-nb" placeholder="Attention, la miniature doit être au format PNG" style="width: 250px;"/>
             <h4>Upload photo</h4>
             <label for="media1" id="mediaLabel">Media1</label>
             <input type="file"
@@ -56,13 +63,6 @@ if (!empty($_POST)) {
                 accept="image/*" />
             <br>
             <button type="button" onClick="addMediaInput()">+</button>
-            <h4>Vidéo :</h4>
-            <p>Si une des images est une miniature de vidéo, indiquez le numéro du l'image ainsi que l'url de la vidéo.</p>
-            <label for="link-video">URL de la vidéo :</label>
-            <input type="text" name="link-video" />
-            <br>
-            <label for="num-video">Numéro de la miniature (format: 00 pour la première 01, 02, 03 etc...) :</label>
-            <input type="text" name="num-video" />
             <br>
             <br>
 

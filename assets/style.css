@@ -919,6 +919,7 @@ body {
 }
 .index ul li {
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 .index ul li:last-of-type {
   margin: 0;
@@ -1011,6 +1012,10 @@ body {
 }
 .close::before {
   transform: rotate(-45deg);
+}
+
+.project-title {
+  display: none;
 }
 
 .slider-container.collapsed {

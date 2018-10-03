@@ -2,7 +2,7 @@ function down() {
     const active = $(".vertical-wrapper .h-content.active .active");
     const next = $(active).next();
 
-    if (next.length) {
+    if (next.length && !next.hasClass("project-title")) {
         $(active).toggleClass("active before");
         $(next).toggleClass("active after");
     }

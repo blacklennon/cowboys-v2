@@ -3,7 +3,7 @@ function fillIndex() {
     let str = '';
     let contentId = 0;
 
-    $(".h-content .project-infos li:first-of-type em:first-of-type").each(function() {
+    $(".h-content .project-title").each(function() {
         titles.push($(this).text());
     });
     

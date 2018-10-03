@@ -23,9 +23,14 @@ function get_text($project)
     return file_get_contents(__DIR__ . "/__PROJECTS/" . $project . "/text.txt");
 }
 
-function set_text($project, $text)
+function set_text($project, $code, $nb)
 {
-    file_put_contents(__DIR__ . "/__PROJECTS/" . $project . "/text.txt", $text);
+    file_put_contents(__DIR__ . "/__PROJECTS/" . $project . "/".$nb.".txt", $code);
+}
+
+function set_title($project, $title)
+{
+    file_put_contents(__DIR__ . "/__PROJECTS/" . $project . "/title.txxt", $title);
 }
 
 function get_index()
@@ -60,7 +65,7 @@ function create_folders($name)
     mkdir(__DIR__ . "/__PROJECTS/" . $name);
 }
 
-function upload_media($project, $files)
+function upload_media($project, $files, $nb_video)
 {
     foreach ($files["media"]["error"] as $key => $error) {
         if ($key <= 9 && $key >= 0) {
@@ -68,7 +73,10 @@ function upload_media($project, $files)
         }
         if ($error == UPLOAD_ERR_OK) {
             $tmp_name = $files["media"]["tmp_name"][$key];
-            $name = $index . '.' . end(explode('/', $files["media"]["type"][$key]));
+            if ($index == $nb_video)
+                $name = $index . '-thumbnail.' . end(explode('/', $files["media"]["type"][$key]));
+            else 
+                $name = $index . '.' . end(explode('/', $files["media"]["type"][$key]));
             move_uploaded_file($tmp_name, __DIR__ . "/__PROJECTS/" . $project . '/' . $name);
         }
     }
@@ -92,8 +100,9 @@ function delete_project($project)
 function create_project($post, $files)
 {
     create_folders($post['project']);
-    set_text($post['project'], $post['description']);
-    upload_media($post['project'], $files);
+    set_text($post['project'], $post['video'], $post['video-nb']);
+    set_title($post['project'], $post['project-title']);
+    upload_media($post['project'], $files, $post['video-nb']);
 }
 
 function create_manifest($post)
