@@ -40,8 +40,7 @@ if (!empty($_POST)) {
         <h3><a href="/admin">Modifier projets</a></h3>
         <form action="" method="post" enctype="multipart/form-data">
             <label for="manifest">Texte Manifeste :</label>
-            <textarea name="manifest" cols="50" rows="40">
-            </textarea>
+            <textarea name="manifest" cols="50" rows="40"><?php echo(file_get_contents(__DIR__."/../__MANIFEST.txt")); ?></textarea>
             <br>
 
             <input type="submit" name="submit" value="Envoyer manifeste">
@@ -49,53 +48,7 @@ if (!empty($_POST)) {
 
         <form action="" method="post" enctype="multipart/form-data">
             <label for="contact">Texte Contact :</label>
-            <textarea name="contact" cols="100" rows="40">
-            <table>
-                <tr>
-                    <th></th>
-                    <th class="contact-type">Nicolas Tzipine<br /><em>Producteur</em></th>
-                </tr>
-                <tr>
-                    <td class="pre-text">Tel.</td>
-                    <td>00 00 00 00 00</td>
-                </tr>
-                <tr>
-                    <td class="contact-mail pretext">Mail.</td>
-                    <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
-                </tr>
-                <tr>
-                    <td class="pre-text">Add.</td>
-                    <td>0, rue Emile Allez<br />00000 Paris</td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th></th>
-                    <th class="contact-type">Nicolas Tzipine<br /><em>Producteur</em></th>
-                </tr>
-                <tr>
-                    <td class="pre-text">Tel.</td>
-                    <td>00 00 00 00 00</td>
-                </tr>
-                <tr>
-                    <td class="contact-mail pretext">Mail.</td>
-                    <td class="contact-mail">nicolastzipine@cowboysfilms.com</td>
-                </tr>
-                <tr>
-                    <td class="pre-text">RS.</td>
-                    <td><table>
-                        <tr>
-                            <td><a href="//instagram.com">Instagram</a></td>
-                            <td><a href="//twitter.com">Twitter</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="//facebook.com">Facebook</a></td>
-                            <td><a href="//pinterest.com">Pinterest</a></td>
-                        </tr>
-                    </table></td>
-                </tr>
-            </table>
-            </textarea>
+            <textarea name="contact" cols="100" rows="40"><?php echo(file_get_contents(__DIR__."/../__CONTACT.txt")); ?></textarea>
             <br>
 
             <input type="submit" name="submit" value="Envoyer contact">
