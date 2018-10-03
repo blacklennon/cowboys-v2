@@ -73,6 +73,9 @@ $(".click-left").click(left);
 
 $(document).keydown(function (e) {
     e.preventDefault();
+    if ($(".contact-container.show").length || $(".manifest-container.show").length) {
+        return;
+    }
     if (e.key == "ArrowLeft") {
         left();
     } else if (e.key == "ArrowRight") {

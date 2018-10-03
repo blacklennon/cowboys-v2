@@ -608,6 +608,34 @@ body {
   display: none;
 }
 
+.dark-background-mobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: #03207e;
+  display: none;
+}
+.dark-background-mobile p {
+  margin-top: 50vh;
+  margin-left: 50vw;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+@media screen and (orientation: portrait) {
+  .dark-background-mobile {
+    display: block !important;
+  }
+
+  body {
+    overflow-y: hidden;
+  }
+}
 .bg-container {
   position: absolute;
   width: calc(100% - 8rem);

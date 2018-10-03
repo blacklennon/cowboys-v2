@@ -90,10 +90,7 @@
                                     break;
                                 } else {
                                     if (pathinfo($value, PATHINFO_EXTENSION) === 'mp4' || pathinfo($value, PATHINFO_EXTENSION) === 'flv' || pathinfo($value, PATHINFO_EXTENSION) === 'mov')
-                                    echo '<video controls class="content after afterglow" width="1280" height="720" poster="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'">
-                                            <source src="'.$value.'" type="video/'.pathinfo($value, PATHINFO_EXTENSION).'">
-                                                Your browser does not support the video tag or the file format of this video.
-                                            </video>';
+                                    echo '<div class="content active"><img src="'.preg_replace("/.mp4|.flv|.mov/", "-thumbnail.png", $value).'" alt="" class="video" /><div class="overlay" data-toggle="modal" data-target="#myModal" data-src="https://player.vimeo.com/video/256962030"><i class="fa fa-4x fa-play-circle icon"></i></div></div>';
                                     else if (pathinfo($value, PATHINFO_EXTENSION) === 'txt') {
                                         echo '<div class="content project-infos after">
                                         <ul>
@@ -131,6 +128,7 @@
             </div>
         </div>
     </div> 
+    <div class="dark-background-mobile"><p>Veuillez tourner votre appareil mobile<br>pour accéder au site.</p></div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
